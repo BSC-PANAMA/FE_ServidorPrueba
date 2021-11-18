@@ -19,4 +19,5 @@ spec:
         image: handsonkubernetesonwinregistry.azurecr.io/webapife:1
         ports:
         - containerPort: 80
-      imagePullSecrets: acr-pruebafe
+      imagePullSecrets: 
+        - name: acr-pruebafe
