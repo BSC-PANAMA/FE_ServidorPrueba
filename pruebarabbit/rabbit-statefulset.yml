@@ -79,7 +79,7 @@ spec:
       name: data
     spec:
       accessModes: [ "ReadWriteOnce" ]
-      storageClassName: "standard"
+      storageClassName: "microk8s-hostpath"
       resources:
         requests:
           storage: 50Mi
