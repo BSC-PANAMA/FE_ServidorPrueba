@@ -29,10 +29,10 @@ metadata:
   labels:
     app: webapi
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: webapi
   ports:
-    - protocol: TCP
-      port: 80
+    - port: 80
       targetPort: 80
+      NodePort: 30007
