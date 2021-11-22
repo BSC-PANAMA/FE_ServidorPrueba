@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: webapi
-        image: handsonkubernetesonwinregistry.azurecr.io/recibirapi:2
+        image: handsonkubernetesonwinregistry.azurecr.io/recibirapi:3
         ports:
         - containerPort: 80
       imagePullSecrets: 
