@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: worker-deployment
+  labels:
+    app: workerfe
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: workerfe
+  template:
+    metadata:
+      labels:
+        app: workerfe
+    spec:
+      containers:
+      - name: workerfe
+        image: handsonkubernetesonwinregistry.azurecr.io/workerfe:1
+      imagePullSecrets: 
+        - name: acr-pruebafe
