@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: consultaapi-deployment
+  labels:
+    app: consultaapi
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: consultaapi
+  template:
+    metadata:
+      labels:
+        app: consultaapi
+    spec:
+      containers:
+      - name: consultaapi
+        image: handsonkubernetesonwinregistry.azurecr.io/consultafe:1
+        ports:
+        - containerPort: 80
+      imagePullSecrets: 
+        - name: acr-pruebafe
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: consultaapi-deployment
+  labels:
+    app: consultaapi
+spec:
+  type: NodePort
+  selector:
+    app: consultaapi
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 30008
