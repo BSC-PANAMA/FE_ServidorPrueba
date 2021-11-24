@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: consultaapi
-        image: handsonkubernetesonwinregistry.azurecr.io/consultafe:1
+        image: handsonkubernetesonwinregistry.azurecr.io/consultafe:2
         ports:
         - containerPort: 80
       imagePullSecrets: 
