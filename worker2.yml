@@ -22,7 +22,7 @@ spec:
       - name: workerfe
         image: handsonkubernetesonwinregistry.azurecr.io/workerfe:2
         volumeMounts:
-          - mountPah: "/app/MyStaticFiles/"
+          - mountPath: "/app/MyStaticFiles/"
             name: task-pv-storage
       imagePullSecrets: 
         - name: acr-pruebafe
