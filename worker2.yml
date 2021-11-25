@@ -21,8 +21,8 @@ spec:
       containers:
       - name: workerfe
         image: handsonkubernetesonwinregistry.azurecr.io/workerfe:2
-        imagePullSecrets: 
-          - name: acr-pruebafe
         volumeMounts:
           - mountPah: "/app/MyStaticFiles/"
             name: task-pv-storage
+      imagePullSecrets: 
+        - name: acr-pruebafe
