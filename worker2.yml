@@ -20,7 +20,7 @@ spec:
             claimName: task-pv-claim
       containers:
       - name: workerfe
-        image: handsonkubernetesonwinregistry.azurecr.io/workerfe:2
+        image: handsonkubernetesonwinregistry.azurecr.io/workerfe:3
         volumeMounts:
           - mountPath: "/app/MyStaticFiles/"
             name: task-pv-storage
